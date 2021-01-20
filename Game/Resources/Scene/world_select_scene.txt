@@ -1,0 +1,197 @@
+# id	file_path	transparent_color_r	g	b
+[TEXTURES]
+1	Resources\Textures\Item\misc.png	176	224	248
+5	Resources\Textures\Title\ui.png	255	127	39
+10	Resources\Textures\Enemy\enemies1.png	3	26	100
+20	Resources\Textures\Item\misc1.png	255	255	255
+21	Resources\Textures\Item\misc-2.png	255	255	255
+30	Resources\Textures\Enemy\enemy.png	255	255	255
+40	Resources\Textures\Enemy\enemies.png	255	255	255
+50	Resources\Textures\Enemy\enemies_custom_2.png	255	255	255
+51	Resources\Textures\Enemy\enemies_custom.png	255	255	255
+45	Resources\Textures\Enemy\enemies-5.png	0	255	255
+46	Resources\Textures\Enemy\enemies-5_1.png	0	255	255
+47	Resources\Textures\Item\effect.png	176	224	248
+48	Resources\Textures\World\overworld-maps.png	166	185	255
+
+# id	left	top	width	height	texture_id
+[SPRITES]
+#------------------ MARIO -----------------------
+#[small]
+1000	252	116	14	16	48
+1001	272	116	14	16	48
+#[big]
+1002	192	116	16	21	48
+1003	312	116	16	21	48
+#[raccoon]
+1004	333	113	16	24	48
+1005	354	113	16	24	48
+#[raccoon P]
+1006	375	113	16	24	48
+1007	396	113	16	24	48
+#[big fire]
+1008	333	168	16	21	48
+1009	354	168	16	21	48
+
+# ----------------- DECORATION ------------------
+#[Cactus]
+2000	252	14	16	16	48
+2001	272	14	16	16	48
+2002	292	14	16	16	48
+
+#[Hammer Brother]
+3000	333	74	16	16	48
+3001	354	74	16	16	48
+
+#[Speech Bubble]
+4000	431	133	16	14	48
+
+
+#----------------- HUD ------------------
+
+#[NUMBER + FONT]
+0	77	31	8	7	5
+1	87	31	8	7	5
+2	97	31	8	7	5
+3	107	31	8	7	5
+4	117	31	8	7	5
+5	127	31	8	7	5
+6	137	31	8	7	5
+7	147	31	8	7	5
+8	157	31	8	7	5
+9	167	31	8	7	5
+
+#[main card]
+20	12	128	152	29	5
+
+#[item card]
+#empty card
+21	160	159	24	28	5
+#mushroom card
+22
+#flower card
+23
+#star card
+24
+#mario tag
+25	16	161	16	7	5
+#luigi tag
+26	16	171	16	7	5
+#bar segment unfill
+27	91	162	8	7	5
+#bar segment fill
+28	64	162	8	7	5
+#p unfill
+29	100	162	15	7	5
+#p fill
+30	73	162	15	7	5
+
+
+# ani_id	sprite1_id	time1	sprite2_id	time2	...
+[ANIMATIONS]
+# ==== MARIO =========
+#small
+100	1000	100	1001	100
+#big
+101	1002	100	1003	100
+#raccoon
+102	1004	100	1005	100
+#raccoon P
+103	1006	100	1007	100
+#fire
+104	1008	100	1009	100
+
+# ===== DECORATION ======
+#[Cactus]
+200	2000	300	2001	300	2002	300	2001	300
+
+#[Hammer Brother]
+300	3000	100	3001	100
+
+#[Speech Bubble]
+400	4000	100
+
+# id	ani1	ani2	ani3
+#
+[ANIMATION_SETS]
+# MARIO
+5	100	101	102	103	104
+# CACTUS
+2	200
+# HAMMER BROTHER
+3	300
+# SPEECH BUBBLE
+4	400
+
+[OBJECTS]
+# type	x	y	ani_set_id	extra_settings per object type
+
+# CACTUS
+30	16	267	2
+30	32	267	2
+30	48	267	2
+30	16	283	2
+30	32	283	2
+30	48	283	2
+
+30	16	316	2
+30	32	316	2
+30	48	316	2
+30	16	332	2
+30	32	332	2
+30	48	332	2
+30	16	348	2
+
+30	80	283	2
+30	96	283	2
+30	112	283	2
+30	80	299	2
+30	96	299	2
+30	112	299	2
+30	80	315	2
+30	96	315	2
+30	112	315	2
+
+30	144	283	2
+30	160	283	2
+30	176	283	2
+
+30	96	348	2
+30	112	348	2
+30	128	348	2
+
+30	144	315	2
+30	160	315	2
+30	176	315	2
+30	192	315	2
+30	144	332	2
+30	160	332	2
+
+30	208	267	2
+30	224	267	2
+30	208	283	2
+30	224	283	2
+30	208	299	2
+30	224	299	2
+30	208	315	2
+30	224	315	2
+
+30	224	332	2
+30	224	348	2
+30	224	364	2
+30	224	380	2
+30	224	396	2
+
+#HAMMER BROTHER
+32	128	363	3
+
+#SPEECH BUBBLE
+33	208	348	4
+
+# MARIO
+31	32	298	5
+
+[TILEMAP]
+#tile id	file_texture	file_path	num row on tex	num col on tex	num row on tilemap	num col tilemap	tile size
+#1000	Resources\TileMap\Map2.png	Resources\TileMap\loadmap3.txt	41	176	41	176	16	16
+1000	Resources\Textures\World\map.png	Resources\Textures\World\map.txt	4	11	15	17	16	16
