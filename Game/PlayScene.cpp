@@ -31,9 +31,12 @@
 #define	OBJECT_TYPE_MARIO_WORLDMAP	31
 #define	OBJECT_TYPE_HAMMER_BROTHER	32
 #define	OBJECT_TYPE_MSPEECH_BUBBLE	33
+#define	OBJECT_TYPE_KOOPA_FLY		34
+
 #define	OBJECT_TYPE_BRICKMOVE	25
 #define	OBJECT_TYPE_KOOPA_BULLET	26
 #define OBJECT_TYPE_CBRICKV2		27
+
 #define CAMERA_HEIGHT_1 245
 #define CAMERA_HEIGHT_2 184
 #define CAMERA_SPEED 0.5f
@@ -44,7 +47,7 @@ PlayScene::PlayScene() : Scene()
 {
 	keyHandler = new PlayScenceKeyHandler(this);
 	LoadBaseObjects();
-	ChooseMap(STAGE_1*2);
+	ChooseMap(STAGE_1*3);
 	Game::GetInstance()->ResetTimer();
 }
 
@@ -261,27 +264,27 @@ void PlayScene::Update(DWORD dt)
 			game->SetCamPos(cx, 465);
 			//DebugOut(L"set cam \n");
 		}
-		//else if (idStage == 1500)
-		//{
-		//	if (!player) return;
-		//	posCamX += 0.35;
-		//	if (player->x < posCamX)
-		//	{
-		//		player->x = posCamX;
-		//		player->isPushed = true;
-		//	}
-		//	else if (player->x > (posCamX + SCREEN_WIDTH - 28))
-		//	{
-		//		player->x = posCamX + SCREEN_WIDTH - 28;
-		//		player->isPushed = true;
-		//	}
-		//	else
-		//	{
-		//		player->isPushed = false;
-		//	}
-		//	//DebugOut(L"posCamx %f \n", posCamX);
-		//	game->SetCamPos(posCamX, 250);
-		//}
+		else if (idStage == 1500)
+		{
+			if (!player) return;
+			posCamX += 0.35;
+			if (player->x < posCamX)
+			{
+				player->x = posCamX;
+				player->isPushed = true;
+			}
+			else if (player->x > (posCamX + SCREEN_WIDTH - 28))
+			{
+				player->x = posCamX + SCREEN_WIDTH - 28;
+				player->isPushed = true;
+			}
+			else
+			{
+				player->isPushed = false;
+			}
+			//DebugOut(L"posCamx %f \n", posCamX);
+			game->SetCamPos(posCamX, 250);
+		}
 		else
 		{
 			if (!player) return;
@@ -1716,7 +1719,18 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 	case OBJECT_TYPE_KOOPA_BULLET:
 	{
 		obj = new KoopaBullet(player);
-		//obj->id_goomba = atoi(tokens[6].c_str());
+		obj->SetPosition(x, y);
+		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
+
+		obj->SetAnimationSet(ani_set);
+		listEnemies.push_back(obj);
+		//totalObjectsIntoGrid.push_back(obj);
+		DebugOut(L"[test] add KoopaBullet !\n");
+		break;
+	}
+	case OBJECT_TYPE_KOOPA_FLY:
+	{
+		obj = new KoopaFly(player);
 		obj->SetPosition(x, y);
 		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
 

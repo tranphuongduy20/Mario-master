@@ -130,6 +130,7 @@
     <ClInclude Include="BrickStand.h" />
     <ClInclude Include="BrokenBrick.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletKoopa.h" />
     <ClInclude Include="Cactus.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CBrick.h" />
@@ -193,6 +194,7 @@
     <ClCompile Include="BrickStand.cpp" />
     <ClCompile Include="BrokenBrick.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletKoopa.cpp" />
     <ClCompile Include="Cactus.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CBrick.cpp" />

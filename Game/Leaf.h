@@ -1,6 +1,6 @@
 #pragma once
 #include "Entity.h"
-#define LEAF_WALKING_SPEED 0.02f;
+#define LEAF_WALKING_SPEED 0.01f;
 
 #define LEAF_BBOX_WIDTH		10
 #define LEAF_BBOX_HEIGHT	16

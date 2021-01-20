@@ -182,6 +182,9 @@
     <ClCompile Include="KoopaFly.cpp">
       <Filter>Header Files\GameSource\Object\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="BulletKoopa.cpp">
+      <Filter>Header Files\GameSource\Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h">
@@ -364,6 +367,9 @@
     <ClInclude Include="Grid.h" />
     <ClInclude Include="KoopaFly.h">
       <Filter>Header Files\GameSource\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletKoopa.h">
+      <Filter>Header Files\GameSource\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

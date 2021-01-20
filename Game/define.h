@@ -171,6 +171,7 @@ enum EntityType
 	ENDSCENE = 60,
 	MOVEBRICK = 61,
 	KOOPABULLET = 62,
+	KOOPAFLY = 63,
 
 	//Effect Zone 70-80
 	FIREEFFECT = 70,

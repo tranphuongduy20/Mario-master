@@ -42,7 +42,7 @@ public:
 	bool hasWing = true;
 	bool hitByWeapon;
 	int startx, widthtogo;
-	KoopaFly(Player* mario, int id_Koopa);
+	KoopaFly(Player* mario);
 	vector<LPGAMEENTITY> listLeaf;
 	int last_state;
 	Player* Mario;

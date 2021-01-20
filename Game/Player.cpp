@@ -61,7 +61,7 @@ void Player::Reset()
 	isFly = false;
 	flyTrip = false;
 	isCheckCanFly = true;
-	this->x = 2050;
+	this->x = 50;
 	this->y = 350;
 	nx = 1;
 	holdthing = nullptr;

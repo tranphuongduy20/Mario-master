@@ -36,6 +36,7 @@
 #include "IntroScene.h"
 #include "MarioBullet.h"
 #include "EndScene.h"
+#include "KoopaFly.h"
 
 
 #include <iostream>
